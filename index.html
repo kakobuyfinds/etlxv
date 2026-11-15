@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>VigorBuy spreadsheet – produktlänkar, QC och frakt</title>
+<meta name="description" content="Svensk guide till VigorBuy spreadsheet. Bläddra bland tio kategorier och lär dig jämföra produktlänkar, storlekar, QC-bilder och frakt till Sverige.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:title" content="VigorBuy spreadsheet – produktlänkar, QC och frakt">
+<meta property="og:description" content="Hitta rätt kategori och jämför mått, kontrollbilder och frakt till Sverige.">
+<!-- Sökunderlag: den direkta Google-resultatsidan gick inte att verifiera.
+Teman från tio domäner i den tillgängliga webbsökningen:
+vigorbuylists.com (kategorier och produktbilder), ssfinds.com (länkar och köpguide),
+spreadsheet-vigorbuy.com (kalkylblad och vikt), rep.tools (originallänkar),
+zentbuyspreadsheet.com (länkformat), vigorbuy.motorcycles (QC och frakt),
+vigorbuywithqc.com (säljarfoton), vigor-buy.com (produktguide),
+vigorbuy.makeup (katalog och QC), vigorbuy.world (kategorier och QC).
+Sekundära sökfraser: VigorBuy produktlänkar, VigorBuy QC-bilder,
+VigorBuy storleksguide, VigorBuy frakt till Sverige.
+Relaterade sökfraser för redaktionellt bruk:
+vad är ett VigorBuy spreadsheet; hur använder man en VigorBuy-lista;
+kontrollera produktlänk från Weidian; jämföra Taobao-annonser;
+hitta artikel-ID på 1688; spara originallänk till produkt; jämföra färgkoder;
+mäta innersula för sneakers; välja storlek på sneakers; mäta bröstvidd på T-shirt;
+mäta ärmlängd på jacka; kontrollera midjemått på byxor;
+läsa säljarens storlekstabell; granska QC-bilder av skor;
+kontrollera sömmar på QC-bilder; jämföra närbilder på etiketter;
+mäta omkrets på keps; kontrollera armbandets längd; granska armbandets lås;
+jämföra fraktalternativ till Sverige; räkna ut paketets volymvikt;
+jämföra faktisk vikt och volymvikt; räkna om totalkostnad till SEK;
+vad ingår i en fraktoffert. -->
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f6f2ea;color:#26213a;font:1rem/1.6 system-ui,sans-serif}
+a{color:inherit}
+a:focus-visible,summary:focus-visible{outline:3px solid #9f501c;outline-offset:4px}
+.wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+header{padding:.85rem 0;border-bottom:1px solid #d9cfc2}
+header a{font-weight:800;text-underline-offset:.2em}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;align-items:center;gap:clamp(1rem,5vw,4rem);padding:clamp(1.5rem,5vw,4rem) 0 1.4rem}
+h1,h2,h3,p,figure{margin:0}
+h1,h2{font-family:Georgia,serif}
+h1{font-size:clamp(2.5rem,7vw,5.8rem);line-height:.95;letter-spacing:-.055em;overflow-wrap:anywhere;margin-bottom:1rem}
+h2{font-size:clamp(1.65rem,4vw,2.7rem);line-height:1.1;margin-bottom:.75rem}
+h3{line-height:1.25;margin-bottom:.45rem}
+p+p{margin-top:.65rem}
+img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#fff}
+.hero img{border-radius:1.4rem;border:1px solid #d9cfc2}
+figcaption{font-size:.85rem;margin-top:.35rem;color:#5c5066}
+.button{display:inline-block;background:#2f2549;color:#fff;padding:.65rem 1rem;border-radius:.5rem;margin-top:1rem;font-weight:700;text-underline-offset:.2em}
+nav,.faq{background:#e9e1f0;padding:clamp(1rem,3vw,2rem);border-radius:1rem}
+.categories,.gallery,.guides{display:grid;gap:.65rem}
+.categories{list-style:none;padding:0;margin:0;grid-template-columns:repeat(auto-fit,minmax(min(9.7rem,100%),1fr))}
+.categories a{display:block;background:#fff;padding:.55rem .75rem;border-radius:.45rem;font-weight:650;text-underline-offset:.15em;height:100%}
+section{margin:2rem 0}
+.gallery,.guides{grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr))}
+.gallery img{border-radius:.6rem}
+article{padding:1rem;border-top:3px solid #6e507f;background:#fff;border-radius:0 0 .5rem .5rem}
+details{border-top:1px solid #b9a9c6;padding:.65rem 0}
+summary{cursor:pointer;font-weight:700}
+details p{margin-top:.4rem}
+footer{border-top:1px solid #d9cfc2;padding:1rem 0 2rem}
+@media(max-width:40rem){.hero{grid-template-columns:1fr}.hero figure{max-width:24rem}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"VigorBuy spreadsheet – produktlänkar, QC och frakt",
+  "description":"Svensk guide till VigorBuy spreadsheet. Bläddra bland tio kategorier och lär dig jämföra produktlänkar, storlekar, QC-bilder och frakt till Sverige.",
+  "inLanguage":"sv",
+  "mainEntity":{
+    "@type":"FAQPage",
+    "inLanguage":"sv",
+    "mainEntity":[
+      {"@type":"Question","name":"Vad är ett VigorBuy spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Det är en produktlista i kalkylbladsform som kan innehålla länkar, varianter och anteckningar om mått, bilder och frakt."}},
+      {"@type":"Question","name":"Hur kontrollerar jag en produktlänk?","acceptedAnswer":{"@type":"Answer","text":"Öppna originalannonsen och jämför artikel-ID, säljare, färg och storlek med dina anteckningar."}},
+      {"@type":"Question","name":"Vad visar QC-bilder?","acceptedAnswer":{"@type":"Answer","text":"QC-bilder visar synliga detaljer på det fotograferade exemplaret. Jämför sömmar, mått och skick. För äkthetskontroll behövs separat underlag."}},
+      {"@type":"Question","name":"Hur jämför jag frakt till Sverige?","acceptedAnswer":{"@type":"Answer","text":"Välj Sverige som destination. Jämför fraktalternativ med samma paketmått och vikt, och räkna om den uppskattade totalkostnaden till SEK."}},
+      {"@type":"Question","name":"Vart går kataloglänkarna?","acceptedAnswer":{"@type":"Answer","text":"Kategorierna och länken till katalogen leder till CAFANS. Sidan är en fristående guide."}}
+    ]
+  }
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/etlxv/">
+</head>
+<body>
+<header><div class="wrap"><a href="https://www.cafans.com">CAFANS</a></div></header>
+<main class="wrap">
+<div class="hero">
+  <div>
+    <h1>VigorBuy spreadsheet</h1>
+    <p>Ett VigorBuy spreadsheet är en produktlista där du kan samla länkar, storlekar och egna anteckningar. Börja med en kategori och jämför originalannonsen, QC-bilderna och frakten innan du bestämmer dig.</p>
+    <a class="button" href="https://www.cafans.com">Öppna CAFANS katalog</a>
+  </div>
+  <figure>
+    <img src="https://alssports.vteximg.com.br/arquivos/ids/3880705/10613661x1238466_alt1.jpg?v=639047806774730000" width="640" height="480" alt="Vit Nike Air Force 1 Texture sedd från sidan" fetchpriority="high">
+    <figcaption>Nike Air Force 1 Texture · exempel på skomodell</figcaption>
+  </figure>
+</div>
+<nav aria-labelledby="kategorier">
+  <h2 id="kategorier">Produktkategorier</h2>
+  <ul class="categories">
+    <li><a href="https://cafans.com/category-911-Shoes.html">Skor</a></li>
+    <li><a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Huvtröjor och tröjor</a></li>
+    <li><a href="https://cafans.com/category-913-T-Shirts.html">T-shirts</a></li>
+    <li><a href="https://cafans.com/category-914-Jackets.html">Jackor</a></li>
+    <li><a href="https://cafans.com/category-915-Pants%2FShorts.html">Byxor och shorts</a></li>
+    <li><a href="https://cafans.com/category-916-Headwear.html">Huvudbonader</a></li>
+    <li><a href="https://cafans.com/category-917-Sets.html">Klädset</a></li>
+    <li><a href="https://cafans.com/category-918-underwear%2Funderpants.html">Underkläder</a></li>
+    <li><a href="https://cafans.com/category-919-Jersey.html">Matchtröjor</a></li>
+    <li><a href="https://cafans.com/category-920-Accessories.html">Accessoarer</a></li>
+  </ul>
+</nav>
+<section aria-labelledby="guider">
+  <h2 id="guider">Guider för att jämföra produkter</h2>
+  <div class="guides">
+    <article>
+      <h3>Kontrollera VigorBuy-produktlänkar</h3>
+      <p>Spara originalannonsens URL, artikel-ID och datum i din produktlista. När du jämför länkar från Weidian, Taobao eller 1688 kan samma produktbild förekomma hos flera säljare. Skriv upp säljare, färgkod och modellnamn så att du hittar tillbaka till rätt variant.</p>
+    </article>
+    <article>
+      <h3>Storleksguide för skor och kläder</h3>
+      <p>För sneakers kan du jämföra innersulans längd i centimeter med ett par som passar. Kontrollera bröstvidd på T-shirts, ärmlängd på jackor och midjemått på byxor. Mät ett plagg som ligger plant och kontrollera om säljarens mått avser bredd eller omkrets.</p>
+    </article>
+    <article>
+      <h3>Läs VigorBuy QC-bilder</h3>
+      <p>Jämför närbilder på sömmar, etiketter och dragkedjor med originalannonsen. Skons sula och tåparti syns bäst från olika vinklar. För kepsar är omkrets och justering relevanta. För armband kan du kontrollera längd, lås och ytfinish.</p>
+    </article>
+    <article>
+      <h3>Jämför frakt till Sverige</h3>
+      <p>Anteckna paketets faktiska vikt och yttermått. Kontrollera om fraktalternativen använder volymvikt och vad som ingår i varje offert. Summera varuvärde, frakt och eventuella avgifter i SEK med samma växelkurs när du jämför två alternativ.</p>
+    </article>
+  </div>
+</section>
+<section aria-labelledby="bildexempel">
+  <h2 id="bildexempel">Bildexempel på skor, plagg och accessoarer</h2>
+  <div class="gallery">
+    <figure><img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-trainer-sneaker--BTU01JGC20_PM1_Side%20view.jpg" width="480" height="360" alt="Louis Vuitton LV Trainer fotograferad från sidan" loading="lazy" decoding="async"><figcaption>Louis Vuitton LV Trainer</figcaption></figure>
+    <figure><img src="https://cdn.shopify.com/s/files/1/0603/3031/1875/products/main-square_b6bff721-6c72-4cbb-91ff-a5e3de2dabd7_1920x.jpg?width=480&amp;v=1694769772" width="480" height="360" alt="Svart Nike Club Fleece-huvtröja med vit Nike-logotyp" loading="lazy" decoding="async"><figcaption>Nike Club Fleece</figcaption></figure>
+    <figure><img src="https://image.shinsegaev.com/upload/C00001/goods/org/349/230320004514349.jpg?RS=750&amp;SP=1" width="480" height="360" alt="Svart Gucci-keps med välvd skärm och ton-i-ton GG-mönster" loading="lazy" decoding="async"><figcaption>Gucci GG-keps</figcaption></figure>
+    <figure><img src="https://assets.christiandior.com/is/image/diorprod/B1310PTCRSD301_E01?%24default_GHC%24=&amp;bfc=on&amp;crop=467%2C327%2C1062%2C1178&amp;qlt=85&amp;wid=480" width="480" height="360" alt="Guldfärgat Dior Petit CD-armband med vit pärldetalj" loading="lazy" decoding="async"><figcaption>Dior Petit CD</figcaption></figure>
+    <figure><img src="https://kream-phinf.pstatic.net/MjAyNTA3MzFfNzAg/MDAxNzUzODk4MTE1MjI3.WHGujKqNd9mT7aHEnAwoupW_atTkD6iQczFjUwc4HVMg.QIMaa4Wt7_-kLRs4KpRV-NQhSMFSfTE8Ggprf8CyWYwg.PNG/a_2fba6b33de3f40fc847572fc7a5614b4.png" width="480" height="360" alt="Orange Hermès Clic H-armband med guldfärgat H-spänne" loading="lazy" decoding="async"><figcaption>Hermès Clic H</figcaption></figure>
+  </div>
+</section>
+<section class="faq" aria-labelledby="faq">
+  <h2 id="faq">Vanliga frågor</h2>
+  <details><summary>Vad är ett VigorBuy spreadsheet?</summary><p>Det är en produktlista i kalkylbladsform som kan innehålla länkar, varianter och anteckningar om mått, bilder och frakt.</p></details>
+  <details><summary>Hur kontrollerar jag en produktlänk?</summary><p>Öppna originalannonsen och jämför artikel-ID, säljare, färg och storlek med dina anteckningar.</p></details>
+  <details><summary>Vad visar QC-bilder?</summary><p>QC-bilder visar synliga detaljer på det fotograferade exemplaret. Jämför sömmar, mått och skick. För äkthetskontroll behövs separat underlag.</p></details>
+  <details><summary>Hur jämför jag frakt till Sverige?</summary><p>Välj Sverige som destination. Jämför fraktalternativ med samma paketmått och vikt, och räkna om den uppskattade totalkostnaden till SEK.</p></details>
+  <details><summary>Vart går kataloglänkarna?</summary><p>Kategorierna och länken till katalogen leder till CAFANS. Sidan är en fristående guide.</p></details>
+</section>
+</main>
+<footer class="wrap"><a href="https://www.cafans.com">Till CAFANS</a></footer>
+</body>
+</html>
